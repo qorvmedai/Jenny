@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Jennifer Ochada | Words That Sell. Marketing That Converts.</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jennifer Ochada | Digital Marketing Strategist">
+    <meta property="og:description" content="Helping businesses grow with digital marketing, branding and social media strategies.">
+    <meta property="og:image" content="https://jenniferochada.com/images/jen.png">
+    <meta property="og:url" content="https://jenniferochada.com">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Hanken+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jennifer Ochada | Digital Marketing Strategist">
+    <meta name="twitter:description" content="Helping businesses grow with digital marketing, branding and social media strategies.">
+    <meta name="twitter:image" content="https://jenniferochada.com/images/jen.png">
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#404945",
+                        "inverse-surface": "#2e3130",
+                        "on-surface": "#1a1c1b",
+                        "surface": "#f9faf7",
+                        "surface-container-low": "#f3f4f1",
+                        "on-background": "#1a1c1b",
+                        "background": "#f9faf7",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c0c8c4",
+                        "surface-container-high": "#e7e8e6",
+                        "primary-fixed-dim": "#a0d1c0",
+                        "surface-container": "#edeeec",
+                        "primary-container": "#063b2f",
+                        "primary": "#00241b",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "3xl": "1.5rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "gutter": "32px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-caps": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["44px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .logo-scroll {
+            animation: scroll 40s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .nav-scrolled {
+            @apply bg-surface-container-lowest/95 shadow-sm py-4 backdrop-blur-lg;
+        }
+        .custom-shadow {
+            box-shadow: 0 20px 40px -15px rgba(0, 36, 27, 0.08);
+        }
+        /* Mobile Menu Lock */
+        body.menu-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-primary/20">
+
+    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto transition-all duration-500 ease-in-out bg-transparent backdrop-blur-sm" id="navbar">
+        <div class="flex items-center z-50 relative">
+            <span class="font-display-lg-mobile text-headline-sm tracking-tight text-primary">Jennifer Ochada</span>
+        </div>
+        
+        <div class="hidden md:flex gap-10 items-center">
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#expertise">Expertise</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#nexus">Nexus</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#process">Process</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#faq">FAQ</a>
+            <a class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-caps text-label-caps transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5" href="#contact">Get Started</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-primary z-50 relative p-2 focus:outline-none" aria-label="Toggle Menu">
+            <span class="material-symbols-outlined text-3xl transition-transform duration-300" id="menu-icon">menu</span>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-surface-container-lowest/98 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col justify-center items-center gap-8 opacity-0 pointer-events-none">
+        <a class="mobile-link font-display-lg text-headline-lg text-on-surface hover:text-primary transition-colors" href="#expertise">Expertise</a>
+        <a class="mobile-link font-display-lg text-headline-lg text-on-surface hover:text-primary transition-colors" href="#services">Services</a>
+        <a class="mobile-link font-display-lg text-headline-lg text-on-surface hover:text-primary transition-colors" href="#nexus">Nexus</a>
+        <a class="mobile-link font-display-lg text-headline-lg text-on-surface hover:text-primary transition-colors" href="#process">Process</a>
+        <a class="mobile-link font-display-lg text-headline-lg text-on-surface hover:text-primary transition-colors" href="#faq">FAQ</a>
+        <a class="mobile-link bg-primary text-on-primary px-10 py-4 rounded-full font-label-caps text-label-caps mt-4 transition-transform active:scale-95" href="#contact">Get Started</a>
+    </div>
+
+    <header class="relative pt-40 pb-20 md:pt-64 md:pb-40 overflow-hidden">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid md:grid-cols-12 gap-gutter items-center">
+                <div class="md:col-span-7 reveal">
+                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-[1.1]">
+                        Words That Sell.<br/>Marketing That Converts.
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        I help businesses, coaches, creators and entrepreneurs attract the right audience, generate quality leads and increase sales through strategic copywriting, marketing and WhatsApp Influencing.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a class="bg-primary text-on-primary px-10 py-5 rounded-full font-label-caps text-label-caps text-center hover:shadow-xl transition-all hover:-translate-y-1" href="https://wa.me/2348155342223?text=Hello%20Jennifer%2C%0A%0AI'd%20like%20to%20book%20a%20discovery%20call%20to%20discuss%20how%20we%20can%20work%20together." target="_blank" rel="noopener noreferrer">Book a Discovery Call</a>
+                        <a class="border border-outline text-primary px-10 py-5 rounded-full font-label-caps text-label-caps text-center hover:bg-surface-container-low transition-all" href="#services">Explore My Services</a>
+                    </div>
+                    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div>
+                            <div class="font-display-lg text-headline-lg text-primary" data-counter="2000">0+</div>
+                            <div class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">LinkedIn Community</div>
+                        </div>
+                        <div>
+                            <div class="font-display-lg text-headline-lg text-primary" data-counter="100">0+</div>
+                            <div class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Businesses Helped</div>
+                        </div>
+                        <div>
+                            <div class="font-display-lg text-headline-lg text-primary">Global</div>
+                            <div class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Clients Served</div>
+                        </div>
+                        <div>
+                            <div class="font-display-lg text-headline-lg text-primary">ROI</div>
+                            <div class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Focused Strategy</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-5 relative mt-12 md:mt-0 reveal delay-200">
+                    <div class="relative z-10 rounded-3xl overflow-hidden aspect-[4/5] custom-shadow">
+                        <img class="w-full h-full object-cover" alt="Jennifer Ochada - Marketing Expert" src="jenny.png" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop';"/>
+                    </div>
+                    <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
+                    <div class="absolute -top-12 -right-12 w-64 h-64 bg-primary/10 rounded-full blur-2xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-12 border-y border-outline-variant/30 overflow-hidden bg-surface-container-lowest">
+        <div class="flex logo-scroll whitespace-nowrap items-center">
+            <div class="flex gap-20 px-10 items-center text-on-surface-variant/40 font-display-lg text-headline-sm grayscale opacity-60">
+                <span>LINKEDIN</span><span class="w-2 h-2 bg-primary rounded-full"></span>
+                <span>UPWORK</span><span class="w-2 h-2 bg-primary rounded-full"></span>
+                <span>WHATSAPP</span><span class="w-2 h-2 bg-primary rounded-full"></span>
+                <span>SELAR</span><span class="w-2 h-2 bg-primary rounded-full"></span>
+                <span>LINKEDIN</span><span class="w-2 h-2 bg-primary rounded-full"></span>
+                <span>UPWORK</span><span class="w-2 h-2 bg-primary rounded-full"></span>
+                <span>WHATSAPP</span><span class="w-2 h-2 bg-primary rounded-full"></span>
+                <span>SELAR</span><span class="w-2 h-2 bg-primary rounded-full"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 md:py-48 bg-surface overflow-hidden">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid md:grid-cols-12 gap-gutter items-center">
+                <div class="md:col-span-5 reveal">
+                    <div class="aspect-square bg-surface-container rounded-3xl overflow-hidden relative custom-shadow">
+                        <img class="w-full h-full object-cover" alt="Jennifer working in a bright office" src="jen.png" onerror="this.src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop';"/>
+                    </div>
+                </div>
+                <div class="md:col-span-6 md:col-start-7 reveal delay-200">
+                    <span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4">MEET JENNIFER</span>
+                    <h2 class="font-display-lg text-headline-lg md:text-display-lg-mobile text-primary mb-8">Direct Response Copywriter & Sales Strategist.</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                        I'm Jennifer Ochada, a Direct Response Copywriter and Sales & Marketing Expert passionate about helping businesses communicate better, sell more, and build sustainable online income.
+                    </p>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                        Over the years, I've helped individuals and businesses improve their marketing, increase conversions, build engaged communities, and create offers people genuinely want to buy. I don't just write words; I architect journeys.
+                    </p>
+                    <div class="border-l-4 border-primary pl-8 py-4 bg-primary/5 rounded-r-2xl italic font-display-lg text-headline-sm text-primary mb-8">
+                        "Marketing isn't about making the most noise. It's about delivering the right message to the right people at the right time."
+                    </div>
+                    <a class="inline-flex items-center gap-4 text-primary font-label-caps text-label-caps group hover:text-primary-container transition-colors" href="https://wa.me/2348155342223?text=Hello%20Jennifer%2C%0A%0AI'd%20like%20to%20schedule%20a%20marketing%20consultation%20with%20you%20to%20discuss%20my%20business%20growth%20strategy.%20Please%20let%20me%20know%20your%20availability." target="_blank" rel="noopener noreferrer">
+                        BOOK A MARKETING CONSULTATION
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 md:py-48" id="expertise">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="text-center mb-20 reveal">
+                <span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4">CORE COMPETENCIES</span>
+                <h2 class="font-display-lg text-headline-lg text-primary">Strategic Growth Expertise</h2>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="reveal p-10 bg-white rounded-3xl custom-shadow hover:-translate-y-2 transition-all duration-500 border border-outline-variant/10 group">
+                    <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                        <span class="material-symbols-outlined text-3xl">edit_note</span>
+                    </div>
+                    <h3 class="font-headline-sm text-primary mb-4">Copywriting</h3>
+                    <p class="text-on-surface-variant font-body-md">High-converting sales pages, email sequences, and ad scripts designed to trigger action.</p>
+                </div>
+                <div class="reveal delay-100 p-10 bg-white rounded-3xl custom-shadow hover:-translate-y-2 transition-all duration-500 border border-outline-variant/10 group">
+                    <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                        <span class="material-symbols-outlined text-3xl">trending_up</span>
+                    </div>
+                    <h3 class="font-headline-sm text-primary mb-4">Sales & Marketing</h3>
+                    <p class="text-on-surface-variant font-body-md">Full-funnel marketing strategies that nurture leads from awareness to loyal advocates.</p>
+                </div>
+                <div class="reveal delay-200 p-10 bg-white rounded-3xl custom-shadow hover:-translate-y-2 transition-all duration-500 border border-outline-variant/10 group">
+                    <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                        <span class="material-symbols-outlined text-3xl">chat</span>
+                    </div>
+                    <h3 class="font-headline-sm text-primary mb-4">WhatsApp Influence</h3>
+                    <p class="text-on-surface-variant font-body-md">Leveraging the world's most popular messaging app for personalized, high-ROI sales visibility.</p>
+                </div>
+                <div class="reveal delay-300 p-10 bg-white rounded-3xl custom-shadow hover:-translate-y-2 transition-all duration-500 border border-outline-variant/10 group">
+                    <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                        <span class="material-symbols-outlined text-3xl">insights</span>
+                    </div>
+                    <h3 class="font-headline-sm text-primary mb-4">Business Growth</h3>
+                    <p class="text-on-surface-variant font-body-md">Identifying scalability bottlenecks and implementing community systems for sustainable revenue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 md:py-48 bg-surface-container-low" id="services">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                <div class="reveal">
+                    <span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4">OUR SERVICES</span>
+                    <h2 class="font-display-lg text-headline-lg text-primary max-w-xl">Tailored Solutions for Visionary Brands.</h2>
+                </div>
+                <div class="reveal delay-200">
+                    <p class="font-body-lg text-on-surface-variant max-w-md">Precision-engineered services designed to eliminate guesswork and deliver measurable results.</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="reveal bg-white p-10 rounded-3xl custom-shadow flex flex-col justify-between h-full border border-outline-variant/10">
+                    <div>
+                        <h3 class="font-headline-sm text-primary mb-4">Direct Response Copywriting</h3>
+                        <p class="text-on-surface-variant text-sm mb-6">I write copy that turns attention into action and prospects into customers across global platforms.</p>
+                        <ul class="space-y-3 mb-10 text-sm">
+                            <li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Sales & Landing Pages</li>
+                            <li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Email Marketing</li>
+                            <li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Ad Copy & Website Copy</li>
+                            <li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Product Descriptions</li>
+                        </ul>
+                    </div>
+                    <a class="font-label-caps text-label-caps text-primary border-b-2 border-primary/20 pb-1 w-fit hover:border-primary transition-all group flex items-center gap-2" href="https://wa.me/2348155342223?text=Hello%20Jennifer%2C%0A%0AI%20found%20your%20website%20and%20I'm%20interested%20in%20your%20Direct%20Response%20Copywriting%20services.%20I'd%20like%20to%20discuss%20my%20project%20and%20get%20a%20quote." target="_blank" rel="noopener noreferrer">
+                        ENQUIRE NOW <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+
+                <div class="reveal delay-100 bg-white p-10 rounded-3xl custom-shadow flex flex-col justify-between h-full border border-outline-variant/10">
+                    <div>
+                        <h3 class="font-headline-sm text-primary mb-4">WhatsApp Influencing</h3>
+                        <p class="text-on-surface-variant text-sm mb-6">Promote your business directly to an engaged audience, giving your offers exposure to ready-buyers.</p>
+                        <ul class="space-y-3 mb-10 text-sm">
+                            <li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Coaches & Brands</li>
+                            <li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Digital Product Sellers</li>
+                            <li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Service Providers</li>
+                            <li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Event Organizers</li>
+                        </ul>
+                    </div>
+                    <a class="font-label-caps text-label-caps text-primary border-b-2 border-primary/20 pb-1 w-fit hover:border-primary transition-all group flex items-center gap-2" href="https://wa.me/2348155342223?text=Hello%20Jennifer%2C%0A%0AI%20came%20across%20your%20website%20and%20I'd%20like%20to%20book%20a%20WhatsApp%20promotion%20for%20my%20business.%20Please%20send%20me%20your%20available%20advertising%20slots%20and%20the%20next%20steps." target="_blank" rel="noopener noreferrer">
+                        BOOK AD SLOT <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+
+                <div class="reveal delay-200 bg-white p-10 rounded-3xl custom-shadow flex flex-col justify-between h-full border border-outline-variant/10">
+                    <div>
+                        <h3 class="font-headline-sm text-primary mb-4">WhatsApp Influencing Training</h3>
+                        <p class="text-on-surface-variant text-sm mb-6">Learn how to build, grow, and monetize your own WhatsApp audience organically.</p>
+                        <ul class="space-y-3 mb-10 text-sm">
+                            <li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Attract Targeted Followers</li>
+                            <li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Create Engaging Content</li>
+                            <li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Organic Lead Generation</li>
+                            <li class="flex items-center gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Convert to Consistent Revenue</li>
+                        </ul>
+                    </div>
+                    <a class="font-label-caps text-label-caps text-primary border-b-2 border-primary/20 pb-1 w-fit hover:border-primary transition-all group flex items-center gap-2" href="https://wa.me/2348155342223?text=Hello%20Jennifer%2C%0A%0AI'm%20interested%20in%20joining%20your%20WhatsApp%20Influencing%20Training%20Program.%20Please%20send%20me%20the%20registration%20details%20and%20pricing." target="_blank" rel="noopener noreferrer">
+                        JOIN THE PROGRAM <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 md:py-48 relative overflow-hidden" id="nexus">
+        <div class="absolute inset-0 bg-primary/5 -z-10"></div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4">THE JENNIFER OCHADA NEXUS</span>
+                <h2 class="font-display-lg text-headline-lg text-primary mb-6">Unified Nexus.<br/>A Growth Ecosystem.</h2>
+                <p class="font-body-lg text-on-surface-variant">My monthly subscription-based WhatsApp community designed for ambitious entrepreneurs, freelancers, creators, and professionals who want to learn, network, and grow together.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="reveal bg-white/60 backdrop-blur-md p-10 rounded-3xl border border-white hover:bg-white/90 transition-all duration-500 custom-shadow">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-6">groups</span>
+                    <h3 class="font-headline-sm text-primary mb-4">Elite Networking</h3>
+                    <p class="text-on-surface-variant">Connect with 7-figure business owners, get accountability, and find collaborations in a supportive environment.</p>
+                </div>
+                <div class="reveal delay-100 bg-white/60 backdrop-blur-md p-10 rounded-3xl border border-white hover:bg-white/90 transition-all duration-500 custom-shadow">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-6">school</span>
+                    <h3 class="font-headline-sm text-primary mb-4">Exclusive Learning</h3>
+                    <p class="text-on-surface-variant">Access valuable business resources and live deep-dives into copywriting, sales psychology, and marketing tech.</p>
+                </div>
+                <div class="reveal delay-200 bg-white/60 backdrop-blur-md p-10 rounded-3xl border border-white hover:bg-white/90 transition-all duration-500 custom-shadow">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-6">workspace_premium</span>
+                    <h3 class="font-headline-sm text-primary mb-4">Direct Feedback</h3>
+                    <p class="text-on-surface-variant">It's more than a WhatsApp group—get your strategy refined during exclusive sessions designed for your success.</p>
+                </div>
+            </div>
+            <div class="mt-20 text-center reveal">
+                <a class="inline-block bg-primary text-on-primary px-12 py-5 rounded-full font-label-caps text-label-caps hover:scale-105 hover:shadow-xl transition-all" href="https://wa.me/2348155342223?text=Hello%20Jennifer%2C%0A%0AI%20would%20like%20to%20join%20Unified%20Nexus.%20Kindly%20send%20me%20information%20about%20the%20membership%2C%20benefits%2C%20and%20how%20to%20get%20started." target="_blank" rel="noopener noreferrer">Apply to Join Nexus</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 md:py-48 bg-surface-container-highest/20">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="text-center mb-20 reveal">
+                <h2 class="font-display-lg text-headline-lg text-primary">Voices of Success</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-gutter">
+                <div class="reveal bg-white p-10 rounded-3xl custom-shadow border border-outline-variant/10">
+                    <div class="flex gap-1 text-primary mb-6">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                    <p class="italic text-on-surface-variant mb-10 leading-relaxed">"Jennifer's copywriting strategy transformed our launch. We saw a 40% increase in conversions compared to our previous campaign. Her understanding of our audience was uncanny."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container flex items-center justify-center font-bold text-primary">
+                            S
+                        </div>
+                        <div>
+                            <div class="font-bold text-primary">Sarah Jenkins</div>
+                            <div class="text-xs text-on-surface-variant uppercase tracking-tighter">Founder, Luxe Coaching</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal delay-100 md:col-span-2 bg-primary text-on-primary p-12 rounded-3xl custom-shadow flex flex-col justify-center">
+                    <div class="flex gap-1 text-primary-fixed-dim mb-6">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                    <p class="font-display-lg text-headline-sm md:text-headline-lg italic mb-10">"Before working with Jennifer, our WhatsApp marketing was non-existent. Now, it's our highest ROI channel. She didn't just give us a script; she built us a system for sustainable growth."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden bg-white/20 flex items-center justify-center font-bold">
+                            D
+                        </div>
+                        <div>
+                            <div class="font-bold">David Okoro</div>
+                            <div class="text-xs text-primary-fixed-dim uppercase tracking-tighter">CEO, GrowthLab Digital</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 md:py-48" id="process">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="text-center mb-20 reveal">
+                <span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4">THE ROADMAP</span>
+                <h2 class="font-display-lg text-headline-lg text-primary">From Vision to Velocity</h2>
+            </div>
+            <div class="relative">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant/30 -translate-y-1/2 -z-10"></div>
+                <div class="grid md:grid-cols-5 gap-12">
+                    <div class="reveal bg-background p-6 text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">01</div>
+                        <h4 class="font-headline-sm text-primary mb-2">Discovery</h4>
+                        <p class="text-sm text-on-surface-variant">Deep dive into your brand, goals, and audience psychology.</p>
+                    </div>
+                    <div class="reveal delay-100 bg-background p-6 text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">02</div>
+                        <h4 class="font-headline-sm text-primary mb-2">Strategy</h4>
+                        <p class="text-sm text-on-surface-variant">Architecting a custom roadmap focused on high-conversion touchpoints.</p>
+                    </div>
+                    <div class="reveal delay-200 bg-background p-6 text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">03</div>
+                        <h4 class="font-headline-sm text-primary mb-2">Execution</h4>
+                        <p class="text-sm text-on-surface-variant">Crafting persuasive copy and setting up marketing frameworks.</p>
+                    </div>
+                    <div class="reveal delay-300 bg-background p-6 text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">04</div>
+                        <h4 class="font-headline-sm text-primary mb-2">Optimization</h4>
+                        <p class="text-sm text-on-surface-variant">Refining campaigns based on real-time data and market feedback.</p>
+                    </div>
+                    <div class="reveal delay-400 bg-background p-6 text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">05</div>
+                        <h4 class="font-headline-sm text-primary mb-2">Growth</h4>
+                        <p class="text-sm text-on-surface-variant">Scaling successful patterns to maximize long-term revenue.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 md:py-48 bg-surface" id="faq">
+        <div class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-display-lg text-headline-lg text-primary">Common Questions</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="reveal bg-white rounded-2xl border border-outline-variant/30 overflow-hidden transition-all duration-300">
+                    <button class="w-full p-8 text-left flex justify-between items-center group" onclick="toggleFaq(this)">
+                        <span class="font-headline-sm text-primary">How long does a typical project take?</span>
+                        <span class="material-symbols-outlined transition-transform duration-300 group-data-[open=true]:rotate-180">expand_more</span>
+                    </button>
+                    <div class="px-8 pb-8 text-on-surface-variant hidden origin-top animate-fade-in">
+                        Standard projects (Sales pages or Email sequences) usually span 2-4 weeks. Full marketing strategies and WhatsApp training programs are typically 6-12 week engagements.
+                    </div>
+                </div>
+                <div class="reveal delay-100 bg-white rounded-2xl border border-outline-variant/30 overflow-hidden transition-all duration-300">
+                    <button class="w-full p-8 text-left flex justify-between items-center group" onclick="toggleFaq(this)">
+                        <span class="font-headline-sm text-primary">Do you offer ongoing retainer services?</span>
+                        <span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="px-8 pb-8 text-on-surface-variant hidden origin-top">
+                        Yes, I work with a limited number of clients on a monthly retainer basis for ongoing copywriting and strategic consulting to ensure consistent growth.
+                    </div>
+                </div>
+                <div class="reveal delay-200 bg-white rounded-2xl border border-outline-variant/30 overflow-hidden transition-all duration-300">
+                    <button class="w-full p-8 text-left flex justify-between items-center group" onclick="toggleFaq(this)">
+                        <span class="font-headline-sm text-primary">Is Nexus suitable for beginners?</span>
+                        <span class="material-symbols-outlined transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="px-8 pb-8 text-on-surface-variant hidden origin-top">
+                        Unified Nexus is designed for entrepreneurs at various stages. While high-level strategy is core, the foundations of copywriting and marketing are covered to ensure everyone can scale effectively.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 md:py-48 overflow-hidden relative" id="contact">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid md:grid-cols-2 gap-gutter items-center">
+                <div class="reveal">
+                    <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 leading-tight">
+                        Let's Build Something That Sells.
+                    </h2>
+                    <p class="font-body-lg text-on-surface-variant mb-12">
+                        If you're ready to grow your business, reach more customers, improve your marketing, or become part of a community that supports your success, I'd love to work with you.
+                    </p>
+                    <div class="space-y-6">
+                        <a href="mailto:ojomolajenny@gmail.com" class="flex items-center gap-6 group">
+                            <div class="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <span class="font-body-lg text-on-surface-variant group-hover:text-primary transition-colors">ojomolajenny@gmail.com</span>
+                        </a>
+                        <a href="https://wa.me/2348155342223?text=Hello%20Jennifer%2C%0A%0AI%20visited%20your%20website%20and%20I'd%20love%20to%20connect%20with%20you%20regarding%20your%20services." target="_blank" rel="noopener noreferrer" class="flex items-center gap-6 group">
+                            <div class="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <span class="material-symbols-outlined">chat_bubble</span>
+                            </div>
+                            <span class="font-body-lg text-on-surface-variant group-hover:text-primary transition-colors">Available via WhatsApp for Quick Enquiries</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="reveal delay-200">
+                    <form id="leadForm" class="bg-white p-10 md:p-14 rounded-3xl custom-shadow space-y-8 border border-outline-variant/10 relative overflow-hidden">
+                        
+                        <div id="formSuccess" class="absolute inset-0 bg-white/95 backdrop-blur-sm z-10 hidden flex-col items-center justify-center text-center p-10 opacity-0 transition-opacity duration-500">
+                            <div class="w-20 h-20 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6">
+                                <span class="material-symbols-outlined text-4xl">check_circle</span>
+                            </div>
+                            <h3 class="font-display-lg text-headline-lg text-primary mb-2">Message Sent!</h3>
+                            <p class="text-on-surface-variant font-body-lg">Thank you for reaching out. Jennifer will get back to you as soon as possible.</p>
+                            <button type="button" id="resetFormBtn" class="mt-8 border border-outline text-primary px-8 py-3 rounded-full font-label-caps text-label-caps hover:bg-surface-container-low transition-all">Send Another Message</button>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="userName" class="font-label-caps text-xs text-on-surface-variant">NAME</label>
+                                <input id="userName" name="name" class="w-full border-b-2 border-outline-variant bg-transparent py-3 focus:outline-none focus:border-primary transition-colors" placeholder="John Doe" type="text" required/>
+                            </div>
+                            <div class="space-y-2">
+                                <label for="userEmail" class="font-label-caps text-xs text-on-surface-variant">EMAIL</label>
+                                <input id="userEmail" name="email" class="w-full border-b-2 border-outline-variant bg-transparent py-3 focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com" type="email" required/>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label for="businessDetails" class="font-label-caps text-xs text-on-surface-variant">BUSINESS NAME / LINK</label>
+                            <input id="businessDetails" name="business" class="w-full border-b-2 border-outline-variant bg-transparent py-3 focus:outline-none focus:border-primary transition-colors" placeholder="www.yourbusiness.com" type="text"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label for="messageBody" class="font-label-caps text-xs text-on-surface-variant">HOW CAN I HELP?</label>
+                            <textarea id="messageBody" name="message" class="w-full border-b-2 border-outline-variant bg-transparent py-3 focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Briefly describe your goals..." rows="4" required></textarea>
+                        </div>
+                        
+                        <div id="formError" class="hidden text-error text-sm font-medium mt-2"></div>
+                        
+                        <button id="submitBtn" class="w-full bg-primary text-on-primary py-5 rounded-full font-label-caps text-label-caps hover:shadow-xl transition-all relative flex items-center justify-center gap-2" type="submit">
+                            <span id="btnText">Send Message</span>
+                            <span id="btnSpinner" class="material-symbols-outlined animate-spin hidden text-xl">autorenew</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-surface-container-high w-full py-margin-desktop px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between gap-gutter rounded-t-[40px] md:rounded-t-[80px]">
+        <div class="space-y-6">
+            <span class="font-display-lg text-headline-lg text-primary">Jennifer Ochada</span>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">High-end strategy for visionary brands. Let's elevate your market presence together.</p>
+        </div>
+        <div class="flex flex-col md:flex-row gap-12 md:gap-20">
+            <div class="flex flex-col gap-4">
+                <span class="font-label-caps text-label-caps text-primary mb-2">QUICK LINKS</span>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#expertise">Expertise</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#services">Services</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#nexus">Nexus</a>
+            </div>
+            <div class="flex flex-col gap-4">
+                <span class="font-label-caps text-label-caps text-primary mb-2">CONTACT</span>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="mailto:ojomolajenny@gmail.com">Email Me</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="https://wa.me/2348155342223?text=Hello%20Jennifer%2C%0A%0AI%20visited%20your%20website%20and%20I'd%20love%20to%20connect%20with%20you%20regarding%20your%20services." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="https://www.linkedin.com/in/jenniferochada" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="https://www.upwork.com/freelancers/~0107cf363e91dfe2f3" target="_blank" rel="noopener noreferrer">Upwork</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="https://www.facebook.com/jennifer.ochada.2025" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+        </div>
+        <div class="md:text-right flex flex-col justify-end mt-8 md:mt-0">
+            <p class="font-body-md text-body-md text-on-surface-variant">© 2026 Jennifer Ochada. All rights reserved.</p>
+            <p class="font-body-md text-body-md text-on-surface-variant">Designed by <a href="https://qorv.org" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors duration-300">QORV LTD</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                // Open menu
+                mobileMenu.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
+                menuIcon.innerText = 'close';
+                document.body.classList.add('menu-open');
+            } else {
+                // Close menu
+                mobileMenu.classList.remove('translate-x-0', 'opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('translate-x-full', 'opacity-0', 'pointer-events-none');
+                menuIcon.innerText = 'menu';
+                document.body.classList.remove('menu-open');
+            }
+        }
+
+        // Click on Hamburger
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+
+        // Click on Links
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if(isMenuOpen) toggleMenu();
+            });
+        });
+
+        // Click outside to close
+        document.addEventListener('click', (e) => {
+            if (isMenuOpen && !mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                toggleMenu();
+            }
+        });
+
+
+        // 2. Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100; // Trigger earlier on mobile viewports
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal, {passive: true});
+        reveal();
+
+
+        // 3. Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        }, {passive: true});
+
+
+        // 4. Number Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('[data-counter]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-counter'));
+                const duration = 2000; 
+                const frameDuration = 1000 / 60;
+                const totalFrames = Math.round(duration / frameDuration);
+                let frame = 0;
+
+                const counterInterval = setInterval(() => {
+                    frame++;
+                    const progress = frame / totalFrames;
+                    // Ease out expo
+                    const currentCount = Math.round(target * (progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress)));
+                    
+                    if (frame === totalFrames) {
+                        clearInterval(counterInterval);
+                        counter.innerText = target + '+';
+                    } else {
+                        counter.innerText = currentCount + (target > 1000 ? '+' : '+');
+                    }
+                }, frameDuration);
+            });
+        }
+        setTimeout(animateCounters, 600);
+
+
+        // 5. FAQ Accordion Toggle
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.material-symbols-outlined');
+            const isOpen = !content.classList.contains('hidden');
+            
+            // Close all others safely
+            document.querySelectorAll('#faq .px-8.pb-8').forEach(el => {
+                if(el !== content) el.classList.add('hidden');
+            });
+            document.querySelectorAll('#faq button').forEach(el => {
+                if(el !== btn) el.removeAttribute('data-open');
+            });
+
+            if (!isOpen) {
+                content.classList.remove('hidden');
+                btn.setAttribute('data-open', 'true');
+            } else {
+                content.classList.add('hidden');
+                btn.removeAttribute('data-open');
+            }
+        }
+
+
+        // 6. Contact Form Logic (Google Sheets / Email integration simulation structure)
+        const leadForm = document.getElementById('leadForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnSpinner = document.getElementById('btnSpinner');
+        const formSuccess = document.getElementById('formSuccess');
+        const resetFormBtn = document.getElementById('resetFormBtn');
+        const formError = document.getElementById('formError');
+
+        // Note: For actual Google Sheets/Email routing, you would replace the URL below 
+        // with your Google Apps Script Web App URL (which forwards to ojomolajenny@gmail.com).
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec"; 
+
+        leadForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            formError.classList.add('hidden');
+            
+            // UI Loading State
+            btnText.innerText = "Sending...";
+            btnSpinner.classList.remove('hidden');
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
+
+            try {
+                const formData = new FormData(leadForm);
+                
+                // Emulated fetch request for production front-end readiness
+                // In production, uncomment the fetch block and remove the setTimeout
+                /*
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    body: formData
+                });
+                if(!response.ok) throw new Error("Network response was not ok");
+                */
+                
+                // Simulated delay for demonstration (Remove in production when fetch is active)
+                await new Promise(resolve => setTimeout(resolve, 1500));
+
+                // Success UI State
+                formSuccess.classList.remove('hidden');
+                // slight delay to allow display block to render before opacity transition
+                setTimeout(() => {
+                    formSuccess.classList.remove('opacity-0');
+                    formSuccess.classList.add('opacity-100');
+                }, 50);
+                
+                leadForm.reset();
+
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                formError.innerText = "Oops! Something went wrong connecting to the server. Please use the WhatsApp button instead.";
+                formError.classList.remove('hidden');
+            } finally {
+                // Reset Button State
+                btnText.innerText = "Send Message";
+                btnSpinner.classList.add('hidden');
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+            }
+        });
+
+        // Reset the form view so user can send another message
+        resetFormBtn.addEventListener('click', () => {
+            formSuccess.classList.remove('opacity-100');
+            formSuccess.classList.add('opacity-0');
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 500);
+        });
+
+    </script>
+</body>
+</html>
